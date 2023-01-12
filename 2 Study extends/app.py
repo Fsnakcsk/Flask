@@ -9,7 +9,7 @@ def index():
         'section 2',
         'section 3'
     ]
-    return render_template('index.html', data = List)
+    return render_template('index.html',title = 'Home', data = List)
 if __name__ == '__main__':
     app.run(debug=True, port=3000)
 

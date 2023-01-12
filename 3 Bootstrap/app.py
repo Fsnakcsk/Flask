@@ -1,6 +1,10 @@
 from flask import Flask, render_template
+#from flask_bootstrap import Bootstrap4 # pip install flask-bootstrap
+
 
 app = Flask(__name__)
+#bootstrap = Bootstrap4(app) # 将App 运用到 Bootstrap
+
 
 @app.route('/')
 def index():
@@ -10,6 +14,8 @@ def index():
         'section 3'
     ]
     return render_template('index.html',title = 'Home', data = List)
+
+
 if __name__ == '__main__':
     app.run(debug=True, port=3000)
 
